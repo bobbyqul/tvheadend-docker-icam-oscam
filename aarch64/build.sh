@@ -8,7 +8,8 @@ mv docker-tvheadend/patches/config.sub docker-tvheadend/patches/argtable/
 cp files/libdvbcsa.patch docker-tvheadend/patches/libdvbcsa/
 #cp files/tvheadend43.patch docker-tvheadend/patches/tvheadend/
 cp files/10-adduser docker-tvheadend/
+cp -r files/root/* docker-tvheadend/root/
 cat files/docker > docker-tvheadend/Dockerfile
 cat files/metric_heartbeat.sh > docker-tvheadend/metric_heartbeat.sh
 cd docker-tvheadend/
-docker build --platform linux/arm64 -t thealhu/tvheadend-aarch64 --network host --no-cache .
+docker build --platform linux/arm64 -t bobbyqul/tvheadend-oscam-icam-aarch64 --network host --no-cache .
