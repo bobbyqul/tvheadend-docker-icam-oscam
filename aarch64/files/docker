@@ -259,4 +259,4 @@ RUN mkdir -p /config/oscam
 
 # ports and volumes
 EXPOSE 8888 9981 9982
-VOLUME /config /config/oscam
+VOLUME /config
